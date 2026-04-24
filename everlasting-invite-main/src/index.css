@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Marcellus&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wedding Invitation — Traditional + Modern Luxury Design System
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ivory / cream base */
+    --background: 40 45% 96%;
+    --foreground: 0 55% 20%;
+
+    --card: 40 50% 98%;
+    --card-foreground: 0 55% 20%;
+
+    --popover: 40 50% 98%;
+    --popover-foreground: 0 55% 20%;
+
+    /* Maroon as primary */
+    --primary: 350 70% 28%;
+    --primary-foreground: 40 50% 96%;
+
+    /* Gold as secondary */
+    --secondary: 40 70% 52%;
+    --secondary-foreground: 0 55% 20%;
+
+    --muted: 40 30% 90%;
+    --muted-foreground: 350 20% 35%;
+
+    /* Gold accent */
+    --accent: 38 65% 55%;
+    --accent-foreground: 0 55% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 50% 96%;
+
+    --border: 40 40% 80%;
+    --input: 40 40% 85%;
+    --ring: 350 70% 35%;
+
+    --radius: 0.5rem;
+
+    /* Brand tokens */
+    --maroon: 350 70% 28%;
+    --maroon-deep: 350 75% 20%;
+    --gold: 40 70% 52%;
+    --gold-light: 42 75% 70%;
+    --gold-deep: 36 70% 42%;
+    --ivory: 40 45% 96%;
+    --cream: 38 50% 92%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(42 75% 70%), hsl(40 70% 52%), hsl(36 70% 42%));
+    --gradient-maroon: linear-gradient(135deg, hsl(350 70% 32%), hsl(350 75% 20%));
+    --gradient-royal: linear-gradient(135deg, hsl(350 75% 20%) 0%, hsl(350 70% 28%) 50%, hsl(36 70% 42%) 100%);
+    --gradient-soft: radial-gradient(ellipse at top, hsl(40 60% 94%), hsl(38 50% 88%));
+
+    /* Shadows */
+    --shadow-card: 0 30px 80px -20px hsl(350 70% 25% / 0.25), 0 10px 30px -10px hsl(36 70% 40% / 0.15);
+    --shadow-gold: 0 10px 40px -10px hsl(40 70% 52% / 0.5);
+    --shadow-soft: 0 8px 30px -6px hsl(350 50% 30% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    background-image:
+      radial-gradient(ellipse at top, hsl(40 60% 94%), hsl(38 50% 92%)),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'><circle cx='30' cy='30' r='1' fill='%23a8821c' fill-opacity='0.06'/></svg>");
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.4);
+    color: hsl(var(--maroon-deep));
+  }
+}
+
+@layer components {
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+    line-height: 1.3;
+  }
+  .font-display {
+    font-family: 'Marcellus', serif;
+  }
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-royal-gradient {
+    background: var(--gradient-royal);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.6), transparent);
+  }
+
+  .ornate-border {
+    border: 1px solid hsl(var(--gold) / 0.5);
+    box-shadow:
+      inset 0 0 0 1px hsl(var(--ivory)),
+      inset 0 0 0 2px hsl(var(--gold) / 0.4),
+      var(--shadow-card);
+  }
+}
+
+@layer utilities {
+  .bg-gradient-gold { background: var(--gradient-gold); }
+  .bg-gradient-maroon { background: var(--gradient-maroon); }
+  .bg-gradient-royal { background: var(--gradient-royal); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+}
