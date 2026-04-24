@@ -25,8 +25,8 @@ const EventHighlights = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="font-display tracking-[0.5em] text-gold-deep text-xs"
         >
           CELEBRATIONS
@@ -34,8 +34,8 @@ const EventHighlights = () => {
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="font-script text-5xl md:text-6xl text-royal-gradient mt-2 leading-[1.5] pt-2 pb-2"
         >
           Save the Dates
@@ -48,8 +48,8 @@ const EventHighlights = () => {
               key={e.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.8, delay: i * 0.15 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               whileHover={{ y: -8 }}
               className="group relative bg-ivory/80 backdrop-blur rounded-sm p-8 shadow-soft
                 border border-gold/30 overflow-hidden"

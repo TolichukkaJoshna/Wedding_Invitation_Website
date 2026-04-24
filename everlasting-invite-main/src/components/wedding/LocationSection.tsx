@@ -14,8 +14,8 @@ const LocationSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="grid md:grid-cols-2 gap-8 mt-10 items-stretch"
         >
           <div className="bg-ivory/80 backdrop-blur p-8 rounded-sm border border-gold/30 shadow-soft text-left flex flex-col justify-center">

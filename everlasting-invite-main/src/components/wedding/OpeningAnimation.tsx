@@ -15,12 +15,12 @@ const OpeningAnimation = ({ onOpen }: Props) => {
     if (sealBroken) return;
     setSealBroken(true);
     // After seal tears, wait briefly then open the book
-    setTimeout(() => setOpening(true), 600);
+    setTimeout(() => setOpening(true), 400);
     // After full book opening completes, reveal site
     setTimeout(() => {
       onOpen();
       setHidden(true);
-    }, 2400);
+    }, 1600);
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
             <motion.div
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: opening ? 1 : 0, scale: opening ? 1 : 0.94 }}
-              transition={{ delay: 0.7, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
               className="absolute inset-4 sm:inset-6 bg-ivory ornate-border rounded-sm flex flex-col items-center justify-center text-center px-6"
             >
               <img src={ganesha} alt="Ganesha" className="w-16 h-16 sm:w-20 sm:h-20 mb-3" width={512} height={512} />
@@ -91,7 +91,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
               style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden", transformOrigin: "left center" }}
               initial={{ rotateY: 0 }}
               animate={{ rotateY: opening ? -165 : 0 }}
-              transition={{ duration: 1.5, ease: [0.42, 0, 0.58, 1] }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
             >
               <div className="h-full w-full bg-gradient-maroon shadow-card rounded-l-sm relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-2 border border-gold/40 rounded-l-sm" />
@@ -124,7 +124,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
               style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden", transformOrigin: "right center" }}
               initial={{ rotateY: 0 }}
               animate={{ rotateY: opening ? 165 : 0 }}
-              transition={{ duration: 1.5, ease: [0.42, 0, 0.58, 1] }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
             >
               <div className="h-full w-full bg-gradient-maroon shadow-card rounded-r-sm relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-2 border border-gold/40 rounded-r-sm" />
@@ -199,7 +199,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
                   >
                     <div className="w-full h-full rounded-full bg-gradient-gold shadow-gold border-2 border-ivory animate-glow-pulse flex items-center justify-end pr-3">
                       <span className="font-display tracking-widest text-maroon-deep text-[10px] sm:text-[12px] leading-tight">
-                        OPOPOP
+                        OPAPOP
                       </span>
                     </div>
                   </motion.button>
@@ -230,7 +230,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
                   >
                     <div className="w-full h-full rounded-full bg-gradient-gold shadow-gold border-2 border-ivory animate-glow-pulse flex items-center justify-start pl-3">
                       <span className="font-display tracking-widest text-maroon-deep text-[10px] sm:text-[12px] leading-tight">
-                        EIIENEN
+                        EIIEDEN
                       </span>
                     </div>
                   </motion.button>

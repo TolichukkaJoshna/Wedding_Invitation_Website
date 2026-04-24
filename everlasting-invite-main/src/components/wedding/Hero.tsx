@@ -13,16 +13,18 @@ const Hero = () => {
           alt="Lord Ganesha blessing"
           width={512}
           height={512}
-          initial={{ opacity: 0, y: -20, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="w-20 md:w-28 mx-auto"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="mt-6 font-display tracking-[0.45em] text-gold-deep text-[10px] sm:text-xs"
         >
           WITH GOD&rsquo;S BLESSINGS
@@ -30,15 +32,17 @@ const Hero = () => {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="gold-divider w-28 sm:w-40 mx-auto my-6"
         />
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="font-script text-5xl sm:text-7xl md:text-8xl text-royal-gradient leading-[1.5] pt-4 pb-1"
         >
           A Sacred Union
@@ -46,8 +50,9 @@ const Hero = () => {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.85 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="font-script text-3xl sm:text-4xl text-gold-deep mt-2"
         >
           of Two Souls
@@ -55,8 +60,9 @@ const Hero = () => {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.05 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="mt-8 font-serif italic text-maroon/80 text-lg sm:text-xl max-w-xl mx-auto leading-relaxed"
         >
           Sriramula&rsquo;s family joyfully invites you to celebrate
@@ -64,9 +70,10 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 1.25 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="mt-6"
         >
           <p className="font-script text-4xl sm:text-6xl text-maroon-deep leading-[1.25]">
@@ -76,15 +83,17 @@ const Hero = () => {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="gold-divider w-28 sm:w-40 mx-auto my-8"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="font-display tracking-[0.35em] text-maroon-deep text-xs sm:text-sm"
         >
           3<sup>RD</sup> MAY 2026 &middot; HYDERABAD
@@ -93,8 +102,9 @@ const Hero = () => {
         <motion.a
           href="#invitation"
           initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.85 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="inline-flex items-center gap-2 mt-10 px-7 py-3 bg-gradient-maroon text-gold-light font-display tracking-[0.3em] text-xs rounded-sm shadow-gold hover:scale-105 transition-transform"
         >
           VIEW INVITATION

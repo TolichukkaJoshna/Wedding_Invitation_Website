@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import ganesha from "@/assets/ganesha.png";
 import floral from "@/assets/floral-corner.png";
 
-const fade = (delay = 0) => ({
+const fade = () => ({
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] as const },
+  viewport: { once: true, amount: 0.1 },
+  transition: { duration: 0.4, ease: "easeOut" },
 });
 
 const InvitationCard = () => {
@@ -15,10 +15,10 @@ const InvitationCard = () => {
       <div className="relative max-w-3xl mx-auto">
         {/* Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="relative bg-ivory rounded-sm shadow-card overflow-hidden"
           style={{
             backgroundImage:
@@ -104,10 +104,10 @@ const InvitationCard = () => {
 
             {/* Couple Names */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="my-10 md:my-12"
             >
               <h2 className="font-script text-5xl md:text-7xl text-royal-gradient leading-[1.5] pt-2 pb-1">
