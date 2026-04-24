@@ -230,7 +230,7 @@ const OpeningAnimation = ({ onOpen }: Props) => {
                   >
                     <div className="w-full h-full rounded-full bg-gradient-gold shadow-gold border-2 border-ivory animate-glow-pulse flex items-center justify-start pl-3">
                       <span className="font-display tracking-widest text-maroon-deep text-[10px] sm:text-[12px] leading-tight">
-                        EIIEDEN
+                        EIIIDEN
                       </span>
                     </div>
                   </motion.button>
